@@ -1,9 +1,14 @@
 let endpoint = `http://localhost:3000/User`;
 
-let usuario = {
+let user = {
     username: 'user',
-    senha: '1234'
+    password: '1234'
 }
+
+fetch(endpoint, {
+    method: "POST",
+    body: JSON.stringify(user),
+})
 
 fetch(endpoint, {
     method: "POST",
